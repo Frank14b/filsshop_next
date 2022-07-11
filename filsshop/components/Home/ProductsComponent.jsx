@@ -6,7 +6,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { ProductsContent } from '../Products/ProductContent';
 
-export function ProductsComponent({ data, custom_class }) {
+export function ProductsComponent({ data, custom_class, isgrid = false }) {
 
     useEffect(function () {
 
@@ -33,48 +33,129 @@ export function ProductsComponent({ data, custom_class }) {
     };
 
     return (
-        <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlaySpeed={3000}
-            centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            pauseOnHover
-            sliderClass=""
-            slidesToSlide={2}
-            swipeable
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={responsive}>
+        <>
+            {
+                (isgrid) ? (
+                    <div className='row product_grid w-100'>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                        <div className='col-md-2 main_product'>
+                            <ProductsContent></ProductsContent>
+                        </div>
+                    </div>
+                ) : (
+                    <Carousel
+                        additionalTransfrom={0}
+                        arrows
+                        autoPlaySpeed={3000}
+                        centerMode={false}
+                        className=""
+                        containerClass="container-with-dots"
+                        dotListClass=""
+                        draggable
+                        focusOnSelect={false}
+                        infinite
+                        itemClass=""
+                        keyBoardControl
+                        minimumTouchDrag={80}
+                        pauseOnHover
+                        sliderClass=""
+                        slidesToSlide={2}
+                        swipeable
+                        renderArrowsWhenDisabled={false}
+                        renderButtonGroupOutside={false}
+                        renderDotsOutside={false}
+                        responsive={responsive}>
 
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-                <ProductsContent></ProductsContent>
-        </Carousel>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                        <ProductsContent></ProductsContent>
+                    </Carousel>
+                )
+            }
+        </>
     )
 }

@@ -49,6 +49,10 @@ a:hover {
   font-weight: 600;
 }
 
+.bold-700 {
+  font-weight: 700;
+}
+
 .radius-0 {
   border-radius: 0px;
 }
@@ -135,7 +139,7 @@ a:hover {
 .mainContainer {
   margin-top: 290px;
   background: #fff;
-  width: 75% !important;
+  width: 80% !important;
   min-height: 1500px;
 }
 
@@ -192,3 +196,10 @@ a:hover {
 }
 
 @import url('products.css');
+
+.image_vendor_product_slide {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}

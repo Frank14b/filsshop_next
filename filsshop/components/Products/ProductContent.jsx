@@ -9,7 +9,7 @@ export function ProductsContent({ data, custom_class }) {
 
     }, [])
     return (
-        <div className='item_caroussel_product bg-white'>
+        <div className='item_product bg-white'>
             <div className='product_div'>
                 <img src="../../images/catg/3dglass.jpg" className='product_img w-100' />
             </div>

@@ -8,29 +8,31 @@ export function FooterComponent({ }) {
             <footer className="py-5 w-75 mx-auto">
                 <div className="row">
                     <div className="col-2">
-                        <h5>Section</h5>
+                        <h5>Menu</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
                             <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
                             <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Brands</a></li>
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Offers</a></li>
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Categories</a></li>
                             <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Contact Us</a></li>
                             <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Sell Now</a></li>
                         </ul>
                     </div>
 
                     <div className="col-2">
-                        <h5>Section</h5>
+                        <h5>Categories</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
+
                         </ul>
                     </div>
 
                     <div className="col-2">
-                        <h5>Section</h5>
+                        <h5>Get in touch</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
+                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Careers</a></li>
+                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Warranty Policy</a></li>
+                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Sell with us</a></li>
+                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Terms of Use</a></li>
+                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Terms of Sale</a></li>
                         </ul>
                     </div>
 
@@ -45,8 +47,8 @@ export function FooterComponent({ }) {
                             </div>
                             <h5 className="mt-5 t-14">GET THE MOBILE APP</h5>
                             <div className="d-flex w-100 gap-2">
-                                <img src="../../images/google-play.svg" className="w-25"/>
-                                <img src="../../images/app-store.svg" className="w-25"/>
+                                <img src="../../images/google-play.svg" className="w-50"/>
+                                <img src="../../images/app-store.svg" className="w-50"/>
                             </div>
                         </form>
                     </div>

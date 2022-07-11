@@ -1,0 +1,19 @@
+.item_caroussel_product {
+    width: 200px;
+    border-radius: 15px;
+}
+
+.item_caroussel_product .product_img {
+    border-radius: 15px;
+}
+
+.product_rating .text_rating {
+    text-decoration: none;
+}
+
+.product_rating .icon {
+    font-size: 14px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 5px;
+}

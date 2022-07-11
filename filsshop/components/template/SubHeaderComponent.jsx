@@ -3,6 +3,7 @@ import { IoIosCart, IoIosHeart, IoIosPerson } from "react-icons/io"
 import { NavDropdown } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import styles from "../../styles/Navbar.module.css"
+import Link from 'next/link'
 
 export function SubHeaderComponent({ }) {
 
@@ -72,32 +73,38 @@ export function SubHeaderComponent({ }) {
             <nav className={`navbar navbar_third navbar-expand-lg navbar-dark bg-success `}>
                 <ul className="navbar-nav mt-lg-0 w-100 text-center mx-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">
-                            <span className={`${(istohidden) && "animate_hidden"}`}>
-                                <img src="../../images/Gold-Price.jpg" className={`${styles.third_nav_img} box_shadow`} />
-                                <br />
-                            </span>
+                        <Link className="nav-link" href="/">
+                            <a>
+                                <span className={`${(istohidden) && "animate_hidden"}`}>
+                                    <img src="../../images/Gold-Price.jpg" className={`${styles.third_nav_img} box_shadow`} />
+                                    <br />
+                                </span>
 
-                            <b className="t-12 text-white">Gold Market</b>
-                        </a>
+                                <b className="t-12 text-white">Gold Market</b>
+                            </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                            <span className={`${(istohidden) && "animate_hidden"}`}>
-                                <img src="../../images/supermarket-logo.webp" className={`${styles.third_nav_img} box_shadow`} />
-                                <br />
-                            </span>
-                            <b className="t-12 text-white">Online Shop</b>
-                        </a>
+                        <Link className="nav-link" href="/sellers">
+                            <a>
+                                <span className={`${(istohidden) && "animate_hidden"}`}>
+                                    <img src="../../images/supermarket-logo.webp" className={`${styles.third_nav_img} box_shadow`} />
+                                    <br />
+                                </span>
+                                <b className="t-12 text-white">Online Shop</b>
+                            </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                            <span className={`${(istohidden) && "animate_hidden"}`}>
-                                <img src="../../images/outlet.png" className={`${styles.third_nav_img} box_shadow`} />
-                                <br />
-                            </span>
-                            <b className="t-12 text-white">Outlet Market</b>
-                        </a>
+                            <Link className="nav-link" href="/">
+                                <>
+                                    <span className={`${(istohidden) && "animate_hidden"}`}>
+                                        <img src="../../images/outlet.png" className={`${styles.third_nav_img} box_shadow`} />
+                                        <br />
+                                    </span>
+                                    <b className="t-12 text-white">Outlet Market</b>
+                                </>
+                            </Link>
                     </li>
                 </ul>
             </nav>

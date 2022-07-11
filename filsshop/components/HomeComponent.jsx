@@ -36,6 +36,10 @@ export function HomeComponent({ }) {
                         <ProductsComponent data={sliders} custom_class={styles.home_slide}></ProductsComponent>
                     </div>
                 </div>
+
+                <div className="last_sliders_home">
+                    <SliderComponent data={sliders} custom_class={styles.home_slide}></SliderComponent>
+                </div>
             </div>
 
             <FooterComponent></FooterComponent>

@@ -1,6 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-body, html {
+body,
+html {
   overflow-x: hidden;
   background: #eee;
 }
@@ -10,7 +11,7 @@ body, html {
 }
 
 .bg-dark {
-  background: rgb(47,53,65) !important;
+  background: rgb(47, 53, 65) !important;
 }
 
 a {
@@ -23,14 +24,15 @@ a:hover {
   color: initial;
 }
 
-.bg-success, .btn-success {
-  background: rgb(140,187,13) !important;
-  border: 1px solid rgb(140,187,13) !important;
+.bg-success,
+.btn-success {
+  background: rgb(140, 187, 13) !important;
+  border: 1px solid rgb(140, 187, 13) !important;
 }
 
 .btn-outline-success {
-  border: 1px solid rgb(140,187,13) !important;
-  color: rgb(140,187,13) !important;
+  border: 1px solid rgb(140, 187, 13) !important;
+  color: rgb(140, 187, 13) !important;
 }
 
 .text-gray {
@@ -42,7 +44,7 @@ a:hover {
 }
 
 .text-success {
-  color: rgb(140,187,13) !important;
+  color: rgb(140, 187, 13) !important;
 }
 
 .bold-600 {
@@ -68,6 +70,7 @@ a:hover {
 .pl-5 {
   padding-left: 5rem;
 }
+
 .pr-5 {
   padding-right: 5rem;
 }
@@ -132,7 +135,7 @@ a:hover {
 }
 
 .nav-link.active {
-  color: rgb(140,187,13) !important;
+  color: rgb(140, 187, 13) !important;
   font-weight: bold !important;
 }
 
@@ -170,8 +173,9 @@ a:hover {
   display: none;
 }
 
-.first_sliders_home .swiper-button-prev, .first_sliders_home .swiper-button-next {
-  color: rgb(140,187,13) !important;
+.first_sliders_home .swiper-button-prev,
+.first_sliders_home .swiper-button-next {
+  color: rgb(140, 187, 13) !important;
 }
 
 .pl-2 {
@@ -188,6 +192,7 @@ a:hover {
   border-radius: 15px;
   position: relative;
 }
+
 .item_caroussel_category .categ_text {
   position: absolute;
   bottom: 0;
@@ -195,6 +200,7 @@ a:hover {
   left: 0;
   right: 0;
 }
+
 .item_caroussel_category .categ_text a {
   text-decoration: none;
 }
@@ -227,7 +233,7 @@ a:hover {
   left: 30px;
   padding: 15px;
   padding-left: 22px;
-  border-radius: 50%; 
+  border-radius: 50%;
   width: 80px;
   height: 80px;
 }
@@ -256,5 +262,10 @@ a:hover {
   .navbar_third .nav-item {
     margin-left: 10px;
     margin-right: 10px;
+    display: inline-block !important;
+  }
+
+  .mainContainer {
+    margin-top: 150px;
   }
 }

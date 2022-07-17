@@ -19,3 +19,12 @@
     border-radius: 7px;
     /* object-fit: cover; */
 }
+
+@media screen and (max-width: 991px) {
+    .third_nav_img {
+        width: 60px;
+        height: 60px;
+        border-radius: 7px;
+        /* object-fit: cover; */
+    }
+}

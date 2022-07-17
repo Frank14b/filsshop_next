@@ -243,3 +243,18 @@ a:hover {
   margin-left: 8px;
   width: 50%;
 }
+
+@media screen and (max-width: 991px) {
+  .navbar_second {
+    display: none;
+  }
+
+  .navbar_third .navbar-nav {
+    display: inline-block !important;
+  }
+
+  .navbar_third .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

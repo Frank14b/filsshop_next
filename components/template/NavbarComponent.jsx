@@ -11,9 +11,9 @@ export function NavbarComponent({ customClass = "bg-success" }) {
     const openDropdown = (name) => {
         // open / close dropdown menu
         let tmp_name = name
-        if(tmp_name != dropdown) {
+        if (tmp_name != dropdown) {
             setDropdown(name)
-        }else{
+        } else {
             setDropdown("")
         }
     }
@@ -21,15 +21,14 @@ export function NavbarComponent({ customClass = "bg-success" }) {
     return (
         <div className={`box_shadow_2 first_navbar_div row position-fixed ${styles.header_fixed}`}>
             <nav className={`navbar navbar-expand-lg navbar-dark pl-5 pr-5 bg-dark`}>
+                <a className="navbar-brand" href="#">
+                    <img src="../../images/logo.png" className={styles.logo} />
+                </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a className="navbar-brand" href="#">
-                        <img src="../../images/logo.png" className={styles.logo} />
-                    </a>
                     <ul className="navbar-nav mr-auto mt-2 mx-5 mt-lg-0 w-12">
-
                         <li className="nav-item dropdown">
                             <a onClick={() => openDropdown("language")} className="nav-link dropdown-toggle" type="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
                                 <small className="text-success bold-600 t-12">Language</small> <br /><span className="t-12">English</span>

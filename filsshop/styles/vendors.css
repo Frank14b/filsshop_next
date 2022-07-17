@@ -1,0 +1,20 @@
+
+.vendor_card_main {}
+
+.vendor_card_main .vendor_card_img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1200px) {
+    .all_vendor_colonne {
+        width: 50%;
+    }
+}
+
+.all_vendor_colonne {
+    margin-bottom: 5rem;
+}

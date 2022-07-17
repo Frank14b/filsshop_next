@@ -1,7 +1,7 @@
 import { NavbarComponent } from "./NavbarComponent";
 import Head from 'next/head'
 
-export function HeaderComponent({ title }) {
+export function HeaderComponent({ title, customClass }) {
 
     return (
         <>
@@ -10,7 +10,7 @@ export function HeaderComponent({ title }) {
                 <link href="../../images/logo_icon.png" rel="icon" />
             </Head>
 
-            <NavbarComponent></NavbarComponent>
+            <NavbarComponent customClass={customClass}></NavbarComponent>
         </>
     )
 }

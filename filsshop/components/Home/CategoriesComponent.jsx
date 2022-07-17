@@ -54,6 +54,9 @@ export function CategoriesComponent({ data, custom_class }) {
             keyBoardControl
             minimumTouchDrag={80}
             pauseOnHover
+            sliderClass=""
+            slidesToSlide={2}
+            swipeable
             renderArrowsWhenDisabled={false}
             renderButtonGroupOutside={false}
             renderDotsOutside={false}

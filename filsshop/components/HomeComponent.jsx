@@ -4,7 +4,7 @@ import { FooterComponent } from "./template/FooterComponent";
 import { HeaderComponent } from "./template/HeaderComponent";
 import styles from "../styles/Home.module.css"
 import { CategoriesComponent } from "./Home/CategoriesComponent";
-import { ProductsComponent } from "./Home/ProductsComponent";
+import { ProductsComponent } from "./Products/ProductsComponent";
 
 export function HomeComponent({ }) {
 

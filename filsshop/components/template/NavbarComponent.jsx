@@ -4,7 +4,7 @@ import { IoIosCart, IoIosHeart, IoIosPerson } from "react-icons/io"
 import { useState } from "react"
 import { SubHeaderComponent } from "./SubHeaderComponent"
 
-export function NavbarComponent({ }) {
+export function NavbarComponent({ customClass = "bg-success" }) {
 
     const [dropdown, setDropdown] = useState("")
 
@@ -20,7 +20,7 @@ export function NavbarComponent({ }) {
 
     return (
         <div className={`box_shadow_2 first_navbar_div row position-fixed ${styles.header_fixed}`}>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark pl-5 pr-5">
+            <nav className={`navbar navbar-expand-lg navbar-dark pl-5 pr-5 bg-dark`}>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -83,7 +83,7 @@ export function NavbarComponent({ }) {
                 </div>
             </nav>
 
-            <SubHeaderComponent></SubHeaderComponent>
+            <SubHeaderComponent customClass={customClass}></SubHeaderComponent>
         </div>
     )
 }

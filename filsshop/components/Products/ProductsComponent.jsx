@@ -4,15 +4,13 @@ import { useEffect } from 'react';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { ProductsContent } from '../Products/ProductContent';
+import { ProductsContent } from './ProductContent';
 
-export function ProductsComponent({ data, custom_class, isgrid = false }) {
+export function ProductsComponent({ data, custom_class, isgrid = false, carousselResponsive = null }) {
 
-    useEffect(function () {
+    const [responsive, setResponsive] = useState({})
 
-    }, [])
-
-    const responsive = {
+    let responsiveDefault = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
@@ -31,6 +29,14 @@ export function ProductsComponent({ data, custom_class, isgrid = false }) {
             items: 3
         }
     };
+
+    useEffect(() => {
+        if(carousselResponsive) {
+            setResponsive(carousselResponsive)
+        }else{
+            setResponsive(responsiveDefault)
+        }
+    }, [carousselResponsive])
 
     return (
         <>

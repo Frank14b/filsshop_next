@@ -143,6 +143,10 @@ a:hover {
   min-height: 1500px;
 }
 
+.mainContainer_no_margin {
+  margin-top: 141px;
+}
+
 @media screen and (max-width: 1400px) {
   .mainContainer {
     width: 100% !important;
@@ -195,11 +199,47 @@ a:hover {
   text-decoration: none;
 }
 
+.border_radius {
+  border-radius: 15px;
+}
+
+/** custom css imports */
 @import url('products.css');
+@import url('vendors.css');
+
+/** custom css imports */
 
 .image_vendor_product_slide {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.btn_map_static {
+  z-index: 999;
+  font-size: 30px;
+  bottom: 80px;
+  left: 30px;
+  padding: 15px;
+  padding-left: 22px;
+  border-radius: 50%; 
+  width: 80px;
+  height: 80px;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.map_img {
+  float: left;
+  margin-bottom: -20px;
+  margin-top: 10px;
+  margin-left: 8px;
+  width: 50%;
 }

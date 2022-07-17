@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import styles from "../../styles/Navbar.module.css"
 import Link from 'next/link'
 
-export function SubHeaderComponent({ }) {
+export function SubHeaderComponent({ customClass }) {
 
     const [istohidden, setIstohidden] = useState(false)
 
@@ -34,8 +34,10 @@ export function SubHeaderComponent({ }) {
             <nav className={`navbar navbar_second navbar-expand-lg navbar-light bg-light ${(istohidden) && "animate_hidden"}`}>
                 <ul className="navbar-nav mt-lg-0 w-100 text-center mx-auto">
                     <li className="nav-item active">
-                        <a className="nav-link active" href="#">
+                        <Link href="/">
+                        <a className="nav-link active">
                             <span className="t-12 bold-600">HOME</span></a>
+                        </Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
@@ -70,10 +72,10 @@ export function SubHeaderComponent({ }) {
             </nav>
 
 
-            <nav className={`navbar navbar_third navbar-expand-lg navbar-dark bg-success `}>
+            <nav className={`navbar navbar_third navbar-expand-lg navbar-dark ${customClass} `}>
                 <ul className="navbar-nav mt-lg-0 w-100 text-center mx-auto">
                     <li className="nav-item active">
-                        <Link className="nav-link" href="/">
+                        <Link className="nav-link" href="/goldmarket">
                             <a>
                                 <span className={`${(istohidden) && "animate_hidden"}`}>
                                     <img src="../../images/Gold-Price.jpg" className={`${styles.third_nav_img} box_shadow`} />
@@ -96,14 +98,14 @@ export function SubHeaderComponent({ }) {
                         </Link>
                     </li>
                     <li className="nav-item">
-                            <Link className="nav-link" href="/">
-                                <>
+                            <Link className="nav-link" href="/outlet">
+                                <a>
                                     <span className={`${(istohidden) && "animate_hidden"}`}>
                                         <img src="../../images/outlet.png" className={`${styles.third_nav_img} box_shadow`} />
                                         <br />
                                     </span>
                                     <b className="t-12 text-white">Outlet Market</b>
-                                </>
+                                </a>
                             </Link>
                     </li>
                 </ul>

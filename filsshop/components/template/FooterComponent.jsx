@@ -1,10 +1,19 @@
 
-import { IoLogoFacebook, IoLogoTwitter, IoLogoYoutube } from "react-icons/io"
+import { IoLogoFacebook, IoLogoTwitter, IoLogoYoutube, IoIosMap } from "react-icons/io"
 
 export function FooterComponent({ }) {
 
     return (
         <div className="row bg-dark mt-0 text-white">
+
+            <a className="btn_map_static position-fixed bg-success text-white shadow cursor_pointer">
+                {/* <IoIosMap className="icon"></IoIosMap> */}
+                <b className="t-10 text-white">
+                    <img src="/images/ae.svg" className="map_img"/> 
+                    Delivery
+                </b>
+            </a>
+
             <footer className="py-5 w-75 mx-auto">
                 <div className="row">
                     <div className="col-2">
@@ -41,14 +50,14 @@ export function FooterComponent({ }) {
                             <h5>Subscribe to our newsletter</h5>
                             <p>Monthly digest of whats new and exciting from us.</p>
                             <div className="d-flex w-100 gap-2">
-                                <label for="newsletter1" className="visually-hidden">Email address</label>
+                                <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
                                     <button className="btn btn-success" type="button">Subscribe</button>
                             </div>
                             <h5 className="mt-5 t-14">GET THE MOBILE APP</h5>
                             <div className="d-flex w-100 gap-2">
-                                <img src="../../images/google-play.svg" className="w-50"/>
-                                <img src="../../images/app-store.svg" className="w-50"/>
+                                <img src="../../images/google-play.svg" className="w-30"/>
+                                <img src="../../images/app-store.svg" className="w-30"/>
                             </div>
                         </form>
                     </div>

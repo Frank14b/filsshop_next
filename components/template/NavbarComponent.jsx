@@ -21,7 +21,7 @@ export function NavbarComponent({ customClass = "bg-success" }) {
     return (
         <div className={`box_shadow_2 first_navbar_div row position-fixed ${styles.header_fixed}`}>
             <nav className={`navbar navbar-expand-lg navbar-dark pl-5 pr-5 bg-dark`}>
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="./">
                     <img src="../../images/logo.png" className={styles.logo} />
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

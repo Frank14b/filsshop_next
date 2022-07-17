@@ -269,17 +269,29 @@ a:hover {
     margin-top: 150px;
   }
 
-  footer .col-2, footer .col-4 {
+  footer .col-2,
+  footer .col-4 {
     width: 50%;
   }
 
   footer .offset-1 {
     margin-left: 0%;
   }
+
+  .w-75 {
+    width: 95% !important;
+  }
+
+  .first_navbar_div .navbar-expand-lg {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 @media screen and (max-width: 557px) {
-  footer .col-2, footer .col-4 {
+
+  footer .col-2,
+  footer .col-4 {
     width: 100%;
   }
 }

@@ -10,6 +10,10 @@ html {
   /* font-family: 'Noto Sans'; */
 }
 
+.visible_mobile {
+  display: none !important;
+}
+
 .bg-dark {
   background: rgb(47, 53, 65) !important;
 }
@@ -249,8 +253,50 @@ a:hover {
   margin-left: 8px;
   width: 50%;
 }
+.navbar-dark .navbar-toggler {
+  border: 0px;
+}
+
+.openNavbar {
+  display: block !important;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  background: rgb(47, 53, 65) !important;
+  z-index: 999;
+}
+.openNavbar ul {
+  width: 90%;
+  margin: auto;
+  display: inline-block;
+}
+.openNavbar ul li {
+  display: inline-block;
+  margin-right: 10%;
+}
+.openNavbar .w-50 {
+  width: 95% !important;
+  margin: auto;
+}
+
+.mobile_menu {
+  display: inline-block;
+  min-width: 160px;
+}
+.mobile_menu li {
+  display: inline-block;
+  margin-right: 10%;
+  display: inline-block;
+}
 
 @media screen and (max-width: 991px) {
+  .visible_mobile {
+    display: block !important;
+  }
+  .hidden_mobile {
+    display: none !important;
+  }
   .navbar_second {
     display: none;
   }
@@ -266,7 +312,7 @@ a:hover {
   }
 
   .mainContainer {
-    margin-top: 150px;
+    margin-top: 165px;
   }
 
   footer .col-2,
@@ -293,5 +339,12 @@ a:hover {
   footer .col-2,
   footer .col-4 {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .openNavbar .form-control {
+    height: 38px;
+    margin-top: 8px;
   }
 }

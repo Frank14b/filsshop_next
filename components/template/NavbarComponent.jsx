@@ -7,6 +7,7 @@ import { SubHeaderComponent } from "./SubHeaderComponent"
 export function NavbarComponent({ customClass = "bg-success" }) {
 
     const [dropdown, setDropdown] = useState("")
+    const [openNavbar, setOpenNavbar] = useState(false)
 
     const openDropdown = (name) => {
         // open / close dropdown menu
@@ -24,10 +25,35 @@ export function NavbarComponent({ customClass = "bg-success" }) {
                 <a className="navbar-brand" href="./">
                     <img src="../../images/logo.png" className={styles.logo} />
                 </a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                
+                <ul className="navbar-nav mobile_menu text-center visible_mobile">
+                    <li className="nav-item active">
+                        <a className="nav-link" href="#">
+                            <IoIosPerson className="t-22 text-white"></IoIosPerson>
+                            {/* <small className="bold-600 text-white">Account</small>  */}
+                            <br /><span className="t-12 hidden_1382">Login/Register</span></a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <IoIosHeart className="t-22 text-white"></IoIosHeart>
+                            <span className="badge bg-danger t-10">0</span>
+                            {/* <small className="bold-600 text-white">WishList</small>  */}
+                            <br /><span className="t-12 hidden_1382">Your WishList</span></a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#">
+                            <IoIosCart className="t-22 text-white"></IoIosCart>
+                            <span className="badge bg-danger t-10">0</span>
+                            {/* <small className="bold-600 text-white">Cart</small>  */}
+                            <br /><span className="t-12 hidden_1382">Your Cart</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <span onClick={() => setOpenNavbar((openNavbar) ? false : true)} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                </span>
+                <div className={`collapse navbar-collapse ${(openNavbar) ? 'openNavbar' : ''}`} id="navbarTogglerDemo01">
                     <ul className="navbar-nav mr-auto mt-2 mx-5 mt-lg-0 w-12">
                         <li className="nav-item dropdown">
                             <a onClick={() => openDropdown("language")} className="nav-link dropdown-toggle" type="button" id="dropdownMenuLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
@@ -55,7 +81,7 @@ export function NavbarComponent({ customClass = "bg-success" }) {
                         <button className={`btn btn-success my-2 my-sm-0 radius-right ${styles.navbar_btn_filter}`} type="button">{language.en.navbar.filer_btn_text}</button>
                     </form>
 
-                    <ul className="navbar-nav mt-2 pl-5 mt-lg-0 pull-right w-25 text-center">
+                    <ul className="navbar-nav mt-2 pl-5 mt-lg-0 pull-right w-25 text-center hidden_mobile">
                         <li className="nav-item active">
                             <a className="nav-link" href="#">
                                 <IoIosPerson className="t-22 text-white"></IoIosPerson>

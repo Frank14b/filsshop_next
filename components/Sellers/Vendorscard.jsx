@@ -22,7 +22,15 @@ export function Vendorscard({ data, customClass = "bg-light" }) {
         },
         mobile: {
             breakpoint: { max: 767, min: 650 },
-            items: 3
+            items: 2.6
+        },
+        extraMobile: {
+            breakpoint: { max: 650, min: 450 },
+            items: 2
+        },
+        superExtraMobile: {
+            breakpoint: { max: 450, min: 0 },
+            items: 1.3
         }
     };
 

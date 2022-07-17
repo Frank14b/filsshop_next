@@ -2,3 +2,10 @@
   margin-top: 10px;
   height: 370px;
 }
+
+@media screen and (max-width: 991px) {
+  .home_slide {
+    margin-top: 10px;
+    height: 240px;
+  }
+}

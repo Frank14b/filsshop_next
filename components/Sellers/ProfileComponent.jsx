@@ -29,6 +29,14 @@ export function ProfileComponent({ data, customClass = "bg-light" }) {
         mobile: {
             breakpoint: { max: 767, min: 650 },
             items: 3
+        },
+        extraMobile: {
+            breakpoint: { max: 650, min: 450 },
+            items: 2
+        },
+        superExtraMobile: {
+            breakpoint: { max: 450, min: 0 },
+            items: 1.8
         }
     };
 

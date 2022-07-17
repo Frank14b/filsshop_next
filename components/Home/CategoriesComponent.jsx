@@ -35,6 +35,14 @@ export function CategoriesComponent({ data, custom_class }) {
         mobile: {
             breakpoint: { max: 850, min: 650 },
             items: 3
+        },
+        extraMobile: {
+            breakpoint: { max: 650, min: 450 },
+            items: 2
+        },
+        superExtraMobile: {
+            breakpoint: { max: 450, min: 0 },
+            items: 1.8
         }
     };
 

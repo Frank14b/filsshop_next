@@ -27,4 +27,8 @@
         border-radius: 7px;
         /* object-fit: cover; */
     }
+
+    .logo {
+        width: 110px;
+    }
 }

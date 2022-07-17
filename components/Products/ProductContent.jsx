@@ -28,7 +28,7 @@ export function ProductsContent({ data, custom_class }) {
                 </b>
 
                 <a href='#' className='btn btn-xs btn-success t-12 pt-1 pb-1 pull-right'>
-                    <IoIosCart className='t-18'></IoIosCart> &nbsp;Add to Cart
+                    <IoIosCart className='t-18'></IoIosCart> <span className='hidden_mobile'>Add to Cart</span>
                 </a>
             </div>
         </div>

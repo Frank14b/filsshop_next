@@ -272,6 +272,10 @@ a:hover {
   footer .col-2, footer .col-4 {
     width: 50%;
   }
+
+  footer .offset-1 {
+    margin-left: 0%;
+  }
 }
 
 @media screen and (max-width: 557px) {

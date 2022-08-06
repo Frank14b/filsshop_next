@@ -35,8 +35,8 @@ export function SubHeaderComponent({ customClass }) {
                 <ul className="navbar-nav mt-lg-0 w-100 text-center mx-auto">
                     <li className="nav-item active">
                         <Link href="/">
-                        <a className="nav-link active">
-                            <span className="t-12 bold-600">HOME</span></a>
+                            <a className="nav-link active">
+                                <span className="t-12 bold-600">HOME</span></a>
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -54,9 +54,11 @@ export function SubHeaderComponent({ customClass }) {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                            <span className="t-12 bold-600">CATEGORIES</span>
-                        </a>
+                        <Link href={"/categories"}>
+                            <a className="nav-link">
+                                <span className="t-12 bold-600">CATEGORIES</span>
+                            </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">
@@ -98,15 +100,15 @@ export function SubHeaderComponent({ customClass }) {
                         </Link>
                     </li>
                     <li className="nav-item">
-                            <Link className="nav-link" href="/outlet">
-                                <a>
-                                    <span className={`${(istohidden) && "animate_hidden"}`}>
-                                        <img src="../../images/outlet.png" className={`${styles.third_nav_img} box_shadow`} />
-                                        <br />
-                                    </span>
-                                    <b className="t-12 text-white">Outlet Market</b>
-                                </a>
-                            </Link>
+                        <Link className="nav-link" href="/outlet">
+                            <a>
+                                <span className={`${(istohidden) && "animate_hidden"}`}>
+                                    <img src="../../images/outlet.png" className={`${styles.third_nav_img} box_shadow`} />
+                                    <br />
+                                </span>
+                                <b className="t-12 text-white">Outlet Market</b>
+                            </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

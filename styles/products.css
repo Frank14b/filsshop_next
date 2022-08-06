@@ -1,10 +1,13 @@
 .item_product {
     width: 200px;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .item_product .product_img {
     border-radius: 15px;
+    height: 240px;
+    object-fit: cover;
 }
 
 .product_rating .text_rating {

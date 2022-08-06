@@ -3,6 +3,7 @@ import styles from "../../styles/Navbar.module.css"
 import { IoIosCart, IoIosHeart, IoIosPerson } from "react-icons/io"
 import { useState } from "react"
 import { SubHeaderComponent } from "./SubHeaderComponent"
+import Link from "next/link"
 
 export function NavbarComponent({ customClass = "bg-success" }) {
 
@@ -83,17 +84,21 @@ export function NavbarComponent({ customClass = "bg-success" }) {
 
                     <ul className="navbar-nav mt-2 pl-5 mt-lg-0 pull-right w-25 text-center hidden_mobile">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">
+                        <Link href="/users/login">
+                            <a className="nav-link">
                                 <IoIosPerson className="t-22 text-white"></IoIosPerson>
                                 {/* <small className="bold-600 text-white">Account</small>  */}
                                 <br /><span className="t-12">Login/Register</span></a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link href="/users/wishlist">
+                            <a className="nav-link">
                                 <IoIosHeart className="t-22 text-white"></IoIosHeart>
                                 <span className="badge bg-danger t-10">0</span>
                                 {/* <small className="bold-600 text-white">WishList</small>  */}
                                 <br /><span className="t-12 hidden_1382">Your WishList</span></a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">

@@ -13,23 +13,32 @@ import { Navigation } from "swiper";
 export function SliderComponent({ data, custom_class }) {
 
     const [_swiper, set_swiper] = useState()
+    const [image, setImage] = useState()
 
     useEffect(function () {
-
+        if(data.length > 0) {
+            setImage(data)
+        }else{
+            setImage([
+                {'title': 'image 1', 'link': '../../images/slide1.webp'},
+                {'title': 'image 2', 'link': '../../images/slide2.jpg'},
+                {'title': 'image 3', 'link': '../../images/slide3.jpg'}
+            ])
+        }
     }, [])
 
     return (
         <>
             <Swiper navigation={true} modules={[Navigation]} className={`${custom_class}`}>
-                <SwiperSlide style={{ 'background': "url(../../images/slide1.webp) center/cover" }}>
-
-                </SwiperSlide>
-                <SwiperSlide style={{ 'background': "url(../../images/slide2.jpg) center/contain" }}>
-
-                </SwiperSlide>
-                <SwiperSlide style={{ 'background': "url(../../images/slide3.jpg) center/contain" }}>
-
-                </SwiperSlide>
+                {
+                    (image) && (
+                        image.map((data, index) => (
+                            <SwiperSlide key={index} style={{ 'background': "url("+data.link+") center/cover" }}>
+                                
+                            </SwiperSlide>
+                        ))
+                    )
+                }
             </Swiper>
         </>
     )

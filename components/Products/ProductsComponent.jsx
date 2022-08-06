@@ -1,14 +1,15 @@
 // import Swiper JS
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState } from "react";
+import { useEffect } from "react";
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import { ProductsContent } from './ProductContent';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { ProductsContent } from "./ProductContent";
 
-export function ProductsComponent({ data, custom_class, isgrid = false, carousselResponsive = null }) {
+export function ProductsComponent({ data, custom_class, isgrid = false, carousselResponsive = null, content_custom = "col-md-2" }) {
 
     const [responsive, setResponsive] = useState({})
+    const [proddata, setProdData] = useState([])
 
     let responsiveDefault = {
         superLargeDesktop: {
@@ -39,135 +40,104 @@ export function ProductsComponent({ data, custom_class, isgrid = false, carousse
     };
 
     useEffect(() => {
-        if(carousselResponsive) {
+        if (carousselResponsive) {
             setResponsive(carousselResponsive)
-        }else{
+        } else {
             setResponsive(responsiveDefault)
         }
     }, [carousselResponsive])
+
+    useEffect(() => {
+        if (data.length > 0) {
+            setProdData(data)
+        } else {
+            setProdData([
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" },
+                { "title": "image 2", "link": "../../images/catg/3dglass.jpg" }
+            ])
+        }
+    }, [])
 
     return (
         <>
             {
                 (isgrid) ? (
-                    <div className='row product_grid w-100'>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
-                        <div className='col-md-2 main_product'>
-                            <ProductsContent></ProductsContent>
-                        </div>
+                    <div className="row product_grid w-100">
+                        {
+                            (proddata.length > 0) && (
+                                proddata.map((data, index) => (
+                                    <div key={index} className={`${content_custom} main_product`}>
+                                        <ProductsContent image={data.link}></ProductsContent>
+                                    </div>
+                                ))
+                            )
+                        }
                     </div>
                 ) : (
-                    <Carousel
-                        additionalTransfrom={0}
-                        arrows
-                        autoPlaySpeed={3000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container-with-dots"
-                        dotListClass=""
-                        draggable
-                        focusOnSelect={false}
-                        infinite
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={80}
-                        pauseOnHover
-                        sliderClass=""
-                        slidesToSlide={2}
-                        swipeable
-                        renderArrowsWhenDisabled={false}
-                        renderButtonGroupOutside={false}
-                        renderDotsOutside={false}
-                        responsive={responsive}>
+                    <div className="my-4">
+                        <Carousel
+                            additionalTransfrom={0}
+                            arrows
+                            autoPlaySpeed={3000}
+                            centerMode={false}
+                            className=""
+                            containerClass="container-with-dots"
+                            dotListClass=""
+                            draggable
+                            focusOnSelect={false}
+                            infinite
+                            itemClass=""
+                            keyBoardControl
+                            minimumTouchDrag={80}
+                            pauseOnHover
+                            sliderClass=""
+                            slidesToSlide={2}
+                            swipeable
+                            renderArrowsWhenDisabled={false}
+                            renderButtonGroupOutside={false}
+                            renderDotsOutside={false}
+                            responsive={responsive}>
 
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                        <ProductsContent></ProductsContent>
-                    </Carousel>
+                            {
+                                (proddata.length > 0) && (
+                                    proddata.map((data, index) => (
+                                        <div key={index} className="col-md-2 main_product">
+                                            <ProductsContent image={data.link}></ProductsContent>
+                                        </div>
+                                    ))
+                                )
+                            }
+                        </Carousel>
+                    </div>
                 )
             }
         </>

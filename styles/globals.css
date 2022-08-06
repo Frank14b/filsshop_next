@@ -1,13 +1,15 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('http://fonts.cdnfonts.com/css/roboto');
 
 body,
 html {
   overflow-x: hidden;
-  background: #eee;
+  background: #fff;
 }
 
 * {
-  /* font-family: 'Noto Sans'; */
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-size: 15px;
 }
 
 .visible_mobile {
@@ -52,11 +54,11 @@ a:hover {
 }
 
 .bold-600 {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .bold-700 {
-  font-weight: 700;
+  font-weight: 700 !important ;
 }
 
 .radius-0 {
@@ -71,6 +73,13 @@ a:hover {
   border-radius: 10px 0 0 10px;
 }
 
+.border-radius-top {
+  border-radius: 10px 10px 0 0;
+}
+
+.border-radius-bottom{
+  border-radius: 0 0 10px 10px;
+}
 .pl-5 {
   padding-left: 5rem;
 }
@@ -101,6 +110,10 @@ a:hover {
 
 .t-10 {
   font-size: 10px;
+}
+
+.mt-n0-2 {
+  margin-top: -0.2em;
 }
 
 .pull-right {
@@ -191,8 +204,8 @@ a:hover {
 }
 
 .item_caroussel_category {
-  height: 200px;
-  width: 200px;
+  height: 23vh;
+  width: 220px;
   border-radius: 15px;
   position: relative;
 }
@@ -209,11 +222,27 @@ a:hover {
   text-decoration: none;
 }
 
+.item_caroussel_category_grid {
+  height: 23vh;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.item_caroussel_category_grid .categ_text {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 15px 15px;
+  left: 0;
+  right: 0;
+}
+
 .border_radius {
   border-radius: 15px;
 }
 
 /** custom css imports */
+@import url('login.css');
 @import url('products.css');
 @import url('vendors.css');
 
@@ -243,7 +272,7 @@ a:hover {
 }
 
 .cursor_pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .map_img {
@@ -347,4 +376,51 @@ a:hover {
     height: 38px;
     margin-top: 8px;
   }
+}
+
+.navbar_second .nav-link span {
+  font-weight: 700 !important;
+}
+
+.img_slide {
+  object-fit: cover;
+  object-position: center;
+}
+
+.swiper_product {
+  height: 40vh;
+}
+
+.vertical_images img{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_image {
+  object-fit: cover;
+  object-position: center;
+  width: 200px !important;
+  height: 300px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background-color: rgb(140, 187, 13) !important;
+}
+
+.nav-pills {
+  cursor: pointer;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border: 0px solid rgba(0,0,0,.125);
+  margin-bottom: 40px;
+}
+.accordion-button:not(.collapsed) {
+  color: initial;
+  background-color: transparent;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }

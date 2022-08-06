@@ -241,13 +241,6 @@ a:hover {
   border-radius: 15px;
 }
 
-/** custom css imports */
-@import url('login.css');
-@import url('products.css');
-@import url('vendors.css');
-
-/** custom css imports */
-
 .image_vendor_product_slide {
   width: 70px;
   height: 70px;
@@ -424,3 +417,10 @@ a:hover {
   background-color: transparent;
   box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
+
+/** custom css imports */
+@import 'login.css';
+@import 'products.css';
+@import 'vendors.css';
+
+/** custom css imports */

@@ -87,7 +87,7 @@ export function SubHeaderComponent({ activeMenu = "", customClass }) {
                     <li className="nav-item active">
                         <Link href="/sellers">
                             <span className="d-flex bg-dark border_radius box_shadow cursor_pointer">
-                                <img src="../../images/sallers.jpg" className={`${styles.third_nav_img} bg-white border_radius`} />
+                                <img src="../../images/sallers.JPG" className={`${styles.third_nav_img} bg-white border_radius`} />
                                 <a className={`nav-link text-white`}>
                                     <span className="t-12 bold-600 px-2">SELLERS</span></a>
                             </span>

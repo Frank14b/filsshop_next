@@ -12,17 +12,19 @@ export function CategoriesPage({ }) {
 
     return (
         <>
-            <HeaderComponent title="Categories" customClass={"bg-dark"}></HeaderComponent>
+            <HeaderComponent  activeMenu={"categories"} title="Categories" customClass={"bg-dark"}></HeaderComponent>
 
             <div className={`mx-auto mainContainer border-radius-top`}>
-                {/* <div className="first_sliders_home">
+                <div className="first_sliders_home">
                     <SliderComponent data={sliders} custom_class={styles.home_slide}></SliderComponent>
-                </div> */}
+                </div>
 
-                <div className="second_content_home pt-5">
-                    <div className="col-md-12 text-left">
-                        <h3 className="text-uppercase bold-600 text-center mb-5">Categories</h3>
+                <div className="tirh_content_home mb-0 pl-1 py-4 bg-success text-white border-radius-bottom">
+                    <div className="col-md-12 text-center">
+                        <h4 className="text-capitalize bold-800">CATEGORIES</h4>
                     </div>
+                </div>
+                <div className="second_content_home pt-5">
                     <div className="">
                         <CategoriesComponent data={sliders} custom_class={styles.home_slide} isgrid={true}></CategoriesComponent>
                     </div>
@@ -54,7 +56,7 @@ export function CategoriesPage({ }) {
                         <ProductsComponent data={sliders} custom_class={styles.home_slide}></ProductsComponent>
                     </div>
                 </div>
-                
+
                 <div className="tirh_content_home my-5 pl-1 py-4 bg-gray">
                     <div className="col-md-12 text-center bold-600">
                         <h4 className="text-capitalize bold-600">HOME APPLIANCES</h4>

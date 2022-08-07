@@ -5,7 +5,7 @@ import { useState } from "react"
 import { SubHeaderComponent } from "./SubHeaderComponent"
 import Link from "next/link"
 
-export function NavbarComponent({ customClass = "bg-success" }) {
+export function NavbarComponent({ activeMenu = "", customClass = "bg-success" }) {
 
     const [dropdown, setDropdown] = useState("")
     const [openNavbar, setOpenNavbar] = useState(false)
@@ -113,7 +113,7 @@ export function NavbarComponent({ customClass = "bg-success" }) {
                 </div>
             </nav>
 
-            <SubHeaderComponent customClass={customClass}></SubHeaderComponent>
+            <SubHeaderComponent activeMenu={activeMenu} customClass={customClass}></SubHeaderComponent>
         </div>
     )
 }

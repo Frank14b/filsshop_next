@@ -46,7 +46,7 @@ export function GoldmarketComponent({ }) {
 
     return (
         <>
-            <HeaderComponent title="GoldMarket" customClass={"bg-warning"}></HeaderComponent>
+            <HeaderComponent title="GoldMarket" customClass={"bg-dark"}></HeaderComponent>
 
             <div className={`mx-auto mainContainer`}>
                 <div className="first_sliders_home">

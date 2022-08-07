@@ -18,7 +18,7 @@ export function ProductsComponent({ data, custom_class, isgrid = false, carousse
             items: 10
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1675 },
+            breakpoint: { max: 3000, min: 1250 },
             items: 6
         },
         tablet: {

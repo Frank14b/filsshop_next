@@ -26,7 +26,7 @@ export function CategoriesComponent({ data, custom_clas, isgrid = false }) {
             items: 10
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1675 },
+            breakpoint: { max: 3000, min: 1250 },
             items: 6
         },
         tablet: {

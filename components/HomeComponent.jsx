@@ -12,7 +12,7 @@ export function HomeComponent({ }) {
 
     return (
         <>
-            <HeaderComponent title="Home"></HeaderComponent>
+            <HeaderComponent activeMenu={"home"} customClass={"bg-light text-dark"} title="Home"></HeaderComponent>
 
             <div className={`mx-auto mainContainer`}>
                 <div className="first_sliders_home">
@@ -93,7 +93,7 @@ export function HomeComponent({ }) {
                     <SliderComponent data={sliders} custom_class={styles.home_slide}></SliderComponent>
                 </div>
 
-                <div className="last_content_home mt-5 bg-white">
+                {/* <div className="last_content_home mt-5 bg-white">
                     <div className="row">
                         <div className="col-md-6">
 
@@ -102,7 +102,7 @@ export function HomeComponent({ }) {
                             
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </div>
 

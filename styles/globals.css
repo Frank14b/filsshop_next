@@ -138,6 +138,10 @@ a:hover {
   margin-right: 20px;
 }
 
+.navbar_second .navbar-nav {
+  padding-left: 3em;
+}
+
 .navbar_third .nav-item {
   margin-left: 50px;
   margin-right: 50px;
@@ -190,9 +194,10 @@ a:hover {
   display: none;
 }
 
-.first_sliders_home .swiper-button-prev,
-.first_sliders_home .swiper-button-next {
-  color: rgb(140, 187, 13) !important;
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+  opacity: 0.5;
 }
 
 .pl-2 {
@@ -238,7 +243,7 @@ a:hover {
 }
 
 .border_radius {
-  border-radius: 15px;
+  border-radius: 8px !important;
 }
 
 .image_vendor_product_slide {
@@ -418,6 +423,13 @@ a:hover {
   box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.first_sliders_home {
+  margin-top: -135px;
+}
 /** custom css imports */
 @import 'login.css';
 @import 'products.css';

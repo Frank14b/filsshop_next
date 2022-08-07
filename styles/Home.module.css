@@ -1,11 +1,11 @@
 .home_slide {
-  margin-top: -20px;
-  height: 50vh;
+  /* margin-top: -140px; */
+  height: 40vh;
 }
 
 @media screen and (max-width: 991px) {
   .home_slide {
     margin-top: -10px;
-    height: 20vh;
+    height: 25vh;
   }
 }

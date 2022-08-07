@@ -1,15 +1,22 @@
 
+import { useState } from "react";
 import { IoLogoFacebook, IoLogoTwitter, IoLogoYoutube, IoIosMap } from "react-icons/io"
+import { ModalPositionComponent } from "../ModalpositionComponent";
 
 export function FooterComponent({ }) {
+
+    const [showModalPosition, setShowModalPosition] = useState(false);
+
+    const handleClose = () => setShowModalPosition(false);
+    const handleShow = () => setShowModalPosition(true);
 
     return (
         <div className="row bg-dark mt-0 text-white">
 
-            <a className="btn_map_static position-fixed bg-success text-white shadow cursor_pointer">
+            <a onClick={() => handleShow()} className="btn_map_static position-fixed bg-success text-white shadow cursor_pointer">
                 {/* <IoIosMap className="icon"></IoIosMap> */}
                 <b className="t-10 text-white">
-                    <img src="/images/ae.svg" className="map_img"/> 
+                    <img src="/images/ae.svg" className="map_img" />
                     Delivery
                 </b>
             </a>
@@ -51,13 +58,13 @@ export function FooterComponent({ }) {
                             <p>Monthly digest of whats new and exciting from us.</p>
                             <div className="d-flex w-100 gap-2">
                                 <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
-                                <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-                                    <button className="btn btn-success" type="button">Subscribe</button>
+                                <input id="newsletter1" type="text" className="form-control" placeholder="Email address" />
+                                <button className="btn btn-success" type="button">Subscribe</button>
                             </div>
                             <h5 className="mt-5 t-14">GET THE MOBILE APP</h5>
                             <div className="d-flex w-100 gap-2">
-                                <img src="../../images/google-play.svg" className="w-30"/>
-                                <img src="../../images/app-store.svg" className="w-30"/>
+                                <img src="../../images/google-play.svg" className="w-30" />
+                                <img src="../../images/app-store.svg" className="w-30" />
                             </div>
                         </form>
                     </div>
@@ -72,6 +79,8 @@ export function FooterComponent({ }) {
                     </ul>
                 </div>
             </footer>
+
+            <ModalPositionComponent show={showModalPosition} handleClose={handleClose}></ModalPositionComponent>
         </div>
     )
 }

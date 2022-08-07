@@ -9,15 +9,16 @@
 .header_fixed {
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1011;
     top: 0;
 }
 
 .third_nav_img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 40px;
     border-radius: 7px;
-    /* object-fit: cover; */
+    float: left;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 991px) {

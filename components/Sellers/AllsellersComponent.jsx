@@ -12,7 +12,7 @@ export function AllsellersComponent({ }) {
 
     return (
         <>
-            <HeaderComponent title="All Sellers" customClass={"bg-dark"}></HeaderComponent>
+            <HeaderComponent  activeMenu={"sellers"} title="All Sellers" customClass={"bg-dark"}></HeaderComponent>
 
             <div className={`mx-auto mainContainer`}>
                 <div className="first_sliders_home">
@@ -25,7 +25,7 @@ export function AllsellersComponent({ }) {
                     </div>
                 </div>
 
-                <div className="second_content_home mb-5 pl-1 bg-dark text-white py-3">
+                <div className="second_content_home mb-5 pl-1 bg-dark text-white py-3 border-radius-bottom">
                     <div className="col-md-12 text-left">
                         <h5 className="text-uppercase bold-600">Filter by Categories</h5>
                     </div>

@@ -13,7 +13,7 @@ export function CategoryPage({ }) {
 
     return (
         <>
-            <HeaderComponent title="Categories" customClass={"bg-dark"}></HeaderComponent>
+            <HeaderComponent activeMenu={"categories"} title="Categories" customClass={"bg-dark"}></HeaderComponent>
 
             <div className={`mx-auto mainContainer`}>
                 <div className="row">
